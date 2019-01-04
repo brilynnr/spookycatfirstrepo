@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+  <title>Eating</title>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Mindbodygreen App">
+  <meta name="keywords" content="Mindbodygreen, mind, body, green, App, Sustainability, Environment, Consumerism, Conscious Consumer, Planet, People, Caring">
+  <meta name="author" content="Brianna Richardson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.typekit.net/bfq3vey.css">
+
+<style>
+body {
+    margin: 0;
+    padding 0;
+}
+* {
+	box-sizing: border-box;
+	font-family: itc-avant-garde-gothic-pro, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+.screen {
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 360px;
+	height: 640px;
+	background-color: #ffffff;
+    box-sizing: border-box;
+	position: absolute;
+}
+.header {
+	width: 100%;
+	height: 50px;
+	background-color: #f2f2f2;
+}
+.content {
+	width: 100%;
+	height: 540px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+} 
+#topblock {
+    width: 100%;
+    height: 120px;
+    background-color: #a0398c;
+    text-align: center;
+    line-height:120px;
+}
+#topblock:hover {
+    background-color: #cc72ca;
+}
+#middleblock {
+    width: 100%;
+    height: 120px;
+    background-color: #422099;
+    text-align: center;
+    line-height: 120px;
+}
+#middleblock:hover {
+    background-color: #5d4cce;
+}
+#bottomblock {
+    width: 100%;
+    height: 120px;
+    background-color: #6c2d96;
+    text-align: center;
+    line-height: 120px;
+}
+#bottomblock:hover {
+    background-color: #9766cc;
+}
+.footer {
+	width: auto;
+	bottom: 0px;
+	height: 50px;
+	text-align: center;
+	margin: auto;
+	box-sizing: border-box;
+	background-color: #cecece;
+	border-bottom: 1px solid lightgrey;
+}
+.footercontent a {
+	float: left;
+	display: block;
+	color: #232323;
+	width: 25%;
+    height: 50px;
+	text-align: center;
+	text-decoration: none;
+	font-family: itc-avant-garde-gothic-pro, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+    font-size: 18px;
+    line-height: 50px;
+}
+.footercontent a:hover {
+	background-color: #9b9b9b;
+}
+.imgeating {
+	display: block;
+	width: 340px;
+	height: auto;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 0px 10px 0px;
+}
+.bodyheader {
+	font-family: itc-avant-garde-gothic-pro, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+    font-size: 18px;
+	color: #232323;
+	text-align: center;
+}
+.bodytext {
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+    font-size: 10px;
+	color: #232323;
+	text-align: left;
+    margin-left: 10px;
+    padding-bottom: 12px;
+}
+.dropbtn {
+    cursor:pointer;
+    text-align: center;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #b4b4b4;
+}
+#importantDropdown{
+width:100%;
+position:absolute;
+display:none;       
+}
+.dropdown-content {
+	display: block;
+	background-color: #f2f2f2;
+	width: 100%;
+	overflow: auto;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+	z-index: 1;
+}
+.dropdown-content a {
+	color: #9b9b9b;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-content a:hover {color: white; background-color: #9b9b9b;}
+.show {display: block;}
+
+.dither {
+    width: 100%;
+    height: 310px;
+    background-color: black;
+    opacity: 0;
+    display: none;
+}
+.mainlinks {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: itc-avant-garde-gothic-pro, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+    font-size: 48px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 180px;
+}
+.slideshow-container {
+    max-width: 360px;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.myslides {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8)
+}
+.text {
+    color: #f2f2f2;
+    font-size: 8px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+</style>
+
+<script>
+function dropdownFunction(){
+    console.log('my function just ran!');
+    console.log(document.getElementById('importantDropdown').style.display);
+    if(document.getElementById('importantDropdown').style.display=="none"){
+    document.getElementById('importantDropdown').style.display="block";
+    } else {
+    document.getElementById('importantDropdown').style.display="none";
+    }
+}
+    
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="screen" style="position:relative">
+    <div class="header">
+        <div style="width:50px;height:50px;background-color:#cecece;position:absolute;margin-left:310px">
+            <div onclick="dropdownFunction()" class="dropbtn"><span style="font-size: 38px;color: black;"><i class="fas fa-bars"></i></span></div>
+        </div>
+        <div style="width:100%;height:50px;background-color:#cecece;"> 
+                <a href="main page.html">
+                    <img src="images/mbg_logo_full-rect.png"  alt="mbg" style="height:50px;width:auto;padding-left: 24px;padding-top: 4px;">
+                </a>
+        </div>
+        <div id="importantDropdown" style="position:absolute;display:none;">
+            <div id="myDropdown" class="dropdown-content">
+                <a href="yogaflow.html">Yoga Flows</a>
+                <a href="meditation.html">Meditations</a>
+                <a href="eating.html">Eating</a>
+            </div>
+        </div>
+
+        
+       
+        
+    </div>
+    <div class="dither">
+        
+    </div>
+    <div class="content">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/yoga 1.jpg" style="width:100%;">
+                <div class="text">YOGA</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/meditation 1.jpg" style="width:100%;">
+                <div class="text">MEDITATION</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/eating 1.jpg" style="width:100%;">
+                <div class="text">EATING</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div id="topblock">
+            <a href="yogaflow.html" class="mainlinks"> YOGA FLOWS </a>
+        </div>
+        <div id="middleblock">
+            <a href="meditation.html" class="mainlinks"> MEDITATIONS </a>
+        </div>
+        <div id="bottomblock">
+            <a href="eating.html" class="mainlinks"> EATING </a>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footercontent"> <a href="#">home</a> </div>
+        <div class="footercontent"> <a href="#">log</a> </div>
+        <div class="footercontent"> <a href="#">journey</a> </div>
+        <div class="footercontent"> <a href="#">settings</a> </div>
+    </div>
+
+</div>
+
+</body>
+</html>
